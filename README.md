@@ -160,8 +160,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-- Tsubasa Sato - satotsubasa@keio.jp
-- Misaki Iio - misaki.iio@keio.jp
+- Tsubasa Sato - okay.bio.sato at gmail.com
+- Misaki Iio - misaki.iio at keio.jp
 
 ## Acknowledgements
 
