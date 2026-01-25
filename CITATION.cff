@@ -1,0 +1,48 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Dormitory Culture Analysis"
+abstract: "Analysis code and manuscript for the study on residential configuration and dormitory culture formation at Keio University"
+type: software
+authors:
+  - family-names: "Sato"
+    given-names: "Tsubasa"
+    email: "satotsubasa@keio.jp"
+    affiliation: "Faculty of Environment and Information Studies, Keio University"
+    orcid: ""
+  - family-names: "Negoro"
+    given-names: "Natsumi"
+    affiliation: "Faculty of Policy Management, Keio University"
+  - family-names: "LoPresti"
+    given-names: "Misa"
+    affiliation: "Faculty of Policy Management, Keio University"
+  - family-names: "Iio"
+    given-names: "Misaki"
+    email: "misaki.iio@keio.jp"
+    affiliation: "Faculty of Policy Management, Keio University"
+version: 1.0.0
+date-released: 2025-01-25
+license: MIT
+repository-code: "https://github.com/Rhizobium-gits/dormitoly-culture-analysis"
+keywords:
+  - university dormitory
+  - residential configuration
+  - gender composition
+  - dormitory culture
+  - intraclass correlation coefficient
+  - cultural similarity
+  - R
+  - mixed-effects models
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Sato"
+      given-names: "Tsubasa"
+    - family-names: "Negoro"
+      given-names: "Natsumi"
+    - family-names: "LoPresti"
+      given-names: "Misa"
+    - family-names: "Iio"
+      given-names: "Misaki"
+  title: "Residential Configuration and Dormitory Culture Formation: A Quantitative Analysis of How Gender Composition and Spatial Design Influence Residents' Cooperative Attitudes in University Housing"
+  journal: "SocArXiv Preprint"
+  year: 2025

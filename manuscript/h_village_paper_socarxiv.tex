@@ -1,0 +1,533 @@
+\documentclass[article]{sa}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% declarations for sa.cls %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Authors and affiliations
+\author{Tsubasa Sato\\Keio University \And 
+  Natsumi Negoro\\Keio University \And
+  Misa LoPresti\\Keio University \And
+  Misaki Iio\\Keio University}
+
+\title{Residential Configuration and Dormitory Culture Formation: A Quantitative Analysis of How Gender Composition and Spatial Design Influence Residents' Cooperative Attitudes in University Housing}
+
+%% for pretty printing and a nice hypersummary also set:
+\Plainauthor{Tsubasa Sato, Natsumi Negoro, Misa LoPresti, Misaki Iio}
+\Plaintitle{Residential Configuration and Dormitory Culture Formation: A Quantitative Analysis of How Gender Composition and Spatial Design Influence Residents' Cooperative Attitudes in University Housing}
+\Shorttitle{Residential Configuration and Dormitory Culture Formation}
+
+%% Abstract and keywords
+\Abstract{
+This study examined how different gender compositions (male-only, female-only, and co-ed dormitories) and spatial designs (same-floor co-ed and floor-separated co-ed) across four buildings in the H village student dormitory at Keio University influenced residents' cooperative attitudes and values. A longitudinal survey was conducted five times between May and November 2025, and data from 153 domestic students were analyzed. The cultural influence of buildings was estimated using intraclass correlation coefficients (ICC) derived from linear mixed-effects models. The overall ICC was 0.075 (95\% CI: [0.000, 0.258]), indicating that approximately 7.5\% of response variance was explained by building differences. For ``willingness to participate in dormitory events,'' ICC reached 0.279 ($p < 0.001$). Analysis of cultural similarity among new residents in co-ed buildings revealed no significant difference between similarity to same-sex seniors (95.1\%) and opposite-sex seniors (95.7\%; $p = 0.160$). However, co-ed buildings showed significantly lower event participation willingness compared to single-sex buildings ($p < 0.05$).
+}
+
+\Keywords{university dormitory, residential configuration, gender composition, dormitory culture, intraclass correlation coefficient, cultural similarity}
+\Plainkeywords{university dormitory, residential configuration, gender composition, dormitory culture, intraclass correlation coefficient, cultural similarity}
+
+%% Publication information
+\Journal{SocArXiv Preprint}
+\Volume{}
+\Issue{}
+\Pages{}
+\Year{2025}
+\Submitdate{\today}
+\Acceptdate{}
+\DOI{}
+
+%% Author addresses
+\Address{
+  Tsubasa Sato\\
+  Faculty of Environment and Information Studies\\
+  Keio University\\
+  5322 Endo, Fujisawa, Kanagawa 252-0882, Japan\\
+  E-mail: \email{satotsubasa@keio.jp}\\[1em]
+  Natsumi Negoro\\
+  Faculty of Policy Management\\
+  Keio University\\
+  5322 Endo, Fujisawa, Kanagawa 252-0882, Japan\\[1em]
+  Misa LoPresti\\
+  Faculty of Policy Management\\
+  Keio University\\
+  5322 Endo, Fujisawa, Kanagawa 252-0882, Japan\\[1em]
+  Misaki Iio\\
+  Faculty of Policy Management\\
+  Keio University\\
+  5322 Endo, Fujisawa, Kanagawa 252-0882, Japan\\
+  E-mail: \email{misaki.iio@keio.jp}
+}
+
+%% end of declarations %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 1. Introduction
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introduction}
+
+University dormitories function not only as residential facilities but also as environments for social development and cooperative attitude formation among students \citep{pascarella2005, astin1993}. Empirical evidence is needed regarding how the physical design and gender composition of dormitories influence residents' social behaviors.
+
+In Japanese university dormitories, different gender configurations---male-only, female-only, and co-ed dormitories---often coexist. However, studies comparing how these residential configurations influence residents' cooperative attitudes and values within the same campus are limited. Furthermore, the question of whether new residents in co-ed dormitories are more strongly influenced by same-sex or opposite-sex senior residents when learning dormitory culture has not been examined.
+
+This study investigated the relationship between residential configuration and residents' cooperative attitudes, focusing on H village, a student dormitory adjacent to the Shonan Fujisawa Campus (SFC) of Keio University.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 2. Theoretical Background
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Theoretical Background}
+
+\subsection{University Housing and Student Development}
+
+\citet{pascarella2005} reported that living in university dormitories positively influences students' cognitive and social development. \citet{astin1993} demonstrated that student involvement affects learning outcomes and suggested that residential environments may facilitate such involvement. Recently, concepts such as ``learning communities'' and ``living-learning programs'' have been proposed, with attempts to utilize residential spaces as environments for learning and growth being reported \citep{inkelas2007}.
+
+\subsection{Social Learning Theory and Same-Sex Modeling}
+
+According to \citet{bandura1977} social learning theory, individuals acquire behaviors and attitudes through observational learning. This theory posits that observers are more likely to imitate the behavior of models with whom they share greater similarity. \citet{bussey1999} reported that in gender development, learning from same-sex models tends to be prioritized. However, whether this same-sex modeling preference is also observed in adult dormitory environments remains unclear.
+
+\subsection{Previous Research on Co-ed Dormitories}
+
+\citet{willoughby2009} reported that residents of co-ed dormitories tend to engage in more risk-taking behaviors. However, empirical examination of patterns of cross-gender cultural influence in co-ed dormitories is lacking.
+
+\subsection{Spatial Design and Social Interaction}
+
+\citet{hillier1984} demonstrated that the configuration of architectural space influences people's interaction patterns. Systematic examination of how dormitory spatial design (same-floor co-ed, floor-separated, etc.) affects residents' social behavior is needed.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 3. Research Questions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Research Questions}
+
+This study addresses five research questions (RQs).
+
+RQ1 examines whether buildings explain significant variance in residents' response patterns regarding cooperative attitudes and values (ICC $> 0$).
+
+RQ2 examines whether the influence of buildings varies across questionnaire items.
+
+RQ3 examines whether new residents converge toward their building's culture over time.
+
+RQ4 examines whether new residents in co-ed buildings are more strongly influenced by same-sex or opposite-sex senior residents. Based on social learning theory, stronger influence from same-sex seniors would be predicted.
+
+RQ5 examines whether there are differences in social participation willingness and building attachment between single-sex and co-ed buildings.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 4. Data and Methods
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Data and Methods}
+
+\subsection{Study Site}
+
+H village comprises four buildings with different residential configurations (Figure~\ref{fig:dormitory}, Table~\ref{tab:building_types}). Basil is a male-only dormitory with all floors composed exclusively of male residents. Turmeric is a female-only dormitory with all floors composed exclusively of female residents. Rosemary is a co-ed dormitory where male and female residents live on the same floor (same-floor co-ed type). Paprika is a co-ed dormitory where the lower floors (up to the 2nd floor) house male residents and upper floors (3rd--4th floors) house female residents (floor-separated type).
+
+\begin{figure}[htbp]
+\centering
+\fbox{\parbox{0.85\textwidth}{\centering\vspace{2cm}[Figure 1: Photographs of H village buildings]\\(To be inserted)\vspace{2cm}}}
+\caption{Exterior views and layout of H village. The spatial arrangement of the four buildings (Basil, Turmeric, Rosemary, and Paprika) is shown. Each building has a distinct residential configuration, with inter-building movement possible through central shared spaces.}
+\label{fig:dormitory}
+\end{figure}
+
+\begin{table}[htbp]
+\centering
+\caption{Residential configurations of H village buildings}
+\begin{tabular}{llll}
+\hline
+Building & Gender composition & Spatial design & Characteristics \\
+\hline
+Basil & Male-only & All floors male & Single-sex \\
+Turmeric & Female-only & All floors female & Single-sex \\
+Rosemary & Co-ed & Males and females on same floor & Same-floor co-ed \\
+Paprika & Co-ed & Males on floors 1--2, females on 3--4 & Floor-separated \\
+\hline
+\end{tabular}
+\label{tab:building_types}
+\end{table}
+
+\subsection{Participants and Sample Size}
+
+The survey targeted all students residing in H village. A longitudinal survey was conducted five times: May, June, July, October, and November 2025. Surveys were not conducted in August and September due to summer vacation.
+
+International students were excluded from analysis to control for cultural differences, and the final sample comprised 153 domestic students (Table~\ref{tab:sample_size}). The breakdown by building was: Basil (male-only), 53 (34.6\%); Turmeric (female-only), 29 (19.0\%); Rosemary (same-floor co-ed), 29 (19.0\%); and Paprika (floor-separated), 42 (27.5\%). First-year undergraduate students were classified as ``new residents,'' and second-year and above as ``incumbent residents.''
+
+\begin{table}[htbp]
+\centering
+\caption{Sample size by building}
+\begin{tabular}{lrr}
+\hline
+Building & $n$ & Percentage \\
+\hline
+Basil (male-only) & 53 & 34.6\% \\
+Turmeric (female-only) & 29 & 19.0\% \\
+Rosemary (same-floor co-ed) & 29 & 19.0\% \\
+Paprika (floor-separated) & 42 & 27.5\% \\
+\hline
+Total & 153 & 100\% \\
+\hline
+\end{tabular}
+\label{tab:sample_size}
+\end{table}
+
+\subsection{Survey Items}
+
+Responses were collected on eight items related to cooperative attitudes and communal living using a 5-point Likert scale (1: Strongly disagree to 5: Strongly agree; Table~\ref{tab:items}).
+
+\begin{table}[htbp]
+\centering
+\caption{Survey items}
+\begin{tabular}{lll}
+\hline
+Item & Content & Category \\
+\hline
+Q1 & Easy to communicate with people in the dormitory & Sociability \\
+Q2 & Feel barriers when talking with opposite sex & Interpersonal \\
+Q3 & Good friendships within my unit & Intimacy \\
+Q4 & Keep my room clean & Personal habits \\
+Q5 & Want to actively participate in dormitory events & Group participation \\
+Q6 & Interested in presentations/public speaking & Self-expression \\
+Q7 & Can confide personal matters to others & Openness \\
+Q8 & Feel attachment to my building & Belonging \\
+\hline
+\end{tabular}
+\label{tab:items}
+\end{table}
+
+\subsection{Ethical Considerations}
+
+This survey was conducted only with residents who provided informed consent. Participants were informed that responses would be statistically processed for improving event management and living conditions at H-village, and that information identifying specific individuals would not be published.
+
+\subsection{Statistical Analysis}
+
+\subsubsection{Estimation of Building Cultural Influence (ICC)}
+
+The cultural influence of buildings was estimated using linear mixed-effects models \citep{bates2015}. For each questionnaire item, the following null model was applied:
+\begin{align}
+y_{ij} = \beta_0 + u_j + \epsilon_{ij}
+\end{align}
+where $y_{ij}$ is the score of individual $i$ belonging to building $j$, $\beta_0$ is the overall mean, $u_j \sim N(0, \sigma^2_b)$ is the random effect of building, and $\epsilon_{ij} \sim N(0, \sigma^2_e)$ is the residual. The intraclass correlation coefficient (ICC) was calculated as:
+\begin{align}
+\mathrm{ICC} = \frac{\sigma^2_b}{\sigma^2_b + \sigma^2_e}
+\end{align}
+
+\subsubsection{Measurement of Cultural Similarity}
+
+Each respondent's response pattern across the eight items was treated as a ``cultural profile,'' and cosine similarity with the mean profile of incumbent residents was calculated:
+\begin{align}
+\text{Similarity} = \frac{\sum_{i=1}^{8} x_i y_i}{\sqrt{\sum_{i=1}^{8} x_i^2} \sqrt{\sum_{i=1}^{8} y_i^2}} \times 100\%
+\end{align}
+
+\subsubsection{Analysis of Cross-Gender Cultural Influence}
+
+For new residents in co-ed buildings (Rosemary and Paprika), two types of comparisons were conducted. In relative comparison, each new resident's similarity to same-sex seniors and opposite-sex seniors was compared using paired t-tests. In absolute comparison, regardless of the new resident's sex, similarity to male senior profiles and female senior profiles was compared using paired t-tests.
+
+\subsubsection{Statistical Validation}
+
+The validity of estimated ICCs was verified using three methods. Likelihood ratio tests (LRT) tested the null hypothesis $H_0: \sigma^2_b = 0$. Bootstrap confidence intervals were calculated as 95\% percentile CIs from 1,000 resampling iterations. PERMANOVA based on Aitchison distance was conducted as permutational multivariate analysis of variance \citep{anderson2001}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 5. Results
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Results}
+
+\subsection{RQ1: Variance Explained by Building}
+
+Application of the linear mixed-effects model to the mean score across eight items yielded an overall ICC of 0.075 (Figure~\ref{fig:cultural_effects}a). This value indicates that approximately 7.5\% of response variance is explained by building differences. Compared to the typical range of classroom effects (ICC = 0.05--0.20) reported in educational research by \citet{hedges2007}, the building effect observed in this study is of comparable magnitude.
+
+The 95\% confidence interval from bootstrap resampling (1,000 iterations) was [0.000, 0.258] (Figure~\ref{fig:cultural_effects}b). The lower bound including zero indicates that the possibility of no building effect cannot be completely rejected. However, the majority of the bootstrap distribution was located at positive values, centered around the point estimate of 0.075.
+
+PERMANOVA detected significant multivariate differences by building ($R^2 = 0.078$, $F = 4.14$, $p = 0.001$; Figure~\ref{fig:cultural_effects}c). This result indicates that when considering the response pattern across all eight items, significant differences exist between buildings. In contrast, differences by sex were not significant ($R^2 = 0.010$, $p = 0.276$). In the principal coordinates analysis (PCoA) plot in Figure~\ref{fig:cultural_effects}c, while the 95\% confidence ellipses for each building partially overlap, the ellipses for Basil (male-only) and Turmeric (female-only) are visually located at relatively distant positions. The finding that sex differences were not significant while building differences were significant suggests that differences in response patterns are associated with the social unit of building rather than sex per se.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.95\textwidth]{figures/fig2_cultural_effects.png}
+\caption{Estimation of building cultural effects. (a) Intraclass correlation coefficients (ICC) by questionnaire item. The red dashed line indicates the overall ICC = 0.075 based on the mean score across eight items. (b) Distribution of overall ICC from 1,000 bootstrap resampling iterations. The solid black line indicates the point estimate (ICC = 0.075), and red dashed lines indicate the boundaries of the 95\% percentile confidence interval ([0.000, 0.258]). (c) Principal coordinates analysis (PCoA) based on Aitchison distance. Each point represents an individual resident, with color indicating building and shape indicating resident type. Ellipses represent 95\% confidence ellipses for each building.}
+\label{fig:cultural_effects}
+\end{figure}
+
+\subsection{RQ2: Item-Specific Building Effects}
+
+Results of ICC estimation for each questionnaire item are shown in Table~\ref{tab:icc} and Figure~\ref{fig:cultural_effects}a. Q5 (event participation willingness) had ICC = 0.279, with $p < 0.001$ in the likelihood ratio test. This value indicates that approximately 28\% of response variance is explained by between-building differences, which is markedly higher than other items. Q5 asks about willingness to participate in group activities (``Want to actively participate in dormitory events''), and it is inferred that building-specific event cultures and participation norms are reflected in residents' responses.
+
+Q3 (unit friendships) had ICC = 0.059, $p = 0.009$, and a significant building effect was detected. Q3 asks about relationships with proximate residents (``Good friendships within my unit''), and differences in unit composition and interaction patterns between buildings may be reflected.
+
+Q8 (building attachment) had ICC = 0.077, but $p = 0.122$, which was not significant at the 0.05 level. For attachment to one's building, individual differences appear to be larger than between-building differences.
+
+In contrast, Q7 (self-disclosure) had ICC = 0.000 and Q4 (room cleanliness) had ICC = 0.013, with building influence barely detected for either. Q7 (``Can confide personal matters to others'') and Q4 (``Keep my room clean'') are items reflecting individual personality traits and habits. The finding that individual differences dominate over the social unit of building is consistent with the nature of these items.
+
+These results indicate a pattern where building effects are readily detected for items with collective or social characteristics (Q5, Q3), while building effects are small for items reflecting individual personality traits or habits (Q7, Q4).
+
+\begin{table}[htbp]
+\centering
+\caption{ICC and likelihood ratio test results by questionnaire item}
+\begin{tabular}{llrrr}
+\hline
+Item & Content & ICC & LRT $\chi^2$ & $p$-value \\
+\hline
+Q5 & Event participation willingness & 0.279 & 19.93 & $<$0.001 \\
+Q8 & Building attachment & 0.077 & 1.36 & 0.122 \\
+Q3 & Unit friendships & 0.059 & 5.55 & 0.009 \\
+Q6 & Interest in presentations & 0.039 & 2.27 & 0.066 \\
+Q2 & Barriers with opposite sex & 0.028 & 0.03 & 0.433 \\
+Q1 & Communication ease & 0.021 & 0.00 & 0.500 \\
+Q4 & Room cleanliness & 0.013 & 0.00 & 0.500 \\
+Q7 & Self-disclosure & 0.000 & 0.00 & 0.500 \\
+\hline
+\end{tabular}
+\label{tab:icc}
+\end{table}
+
+\subsection{RQ3: Cultural Convergence}
+
+Calculation of cosine similarity between each resident and the incumbent resident profile of their building yielded an overall mean similarity of 93.5\% (SD = 3.2\%; Figure~\ref{fig:convergence}a). As shown in the violin plots in Figure~\ref{fig:convergence}a, high similarity above 90\% was observed across all buildings, confirming consistency of cultural profiles within each building. No major differences in similarity distributions were observed between buildings, with residents in all buildings showing high similarity to the incumbent profile of their building.
+
+Wilcoxon rank-sum tests comparing similarity between new and incumbent residents found no significant differences in any building (Figure~\ref{fig:convergence}b). This result indicates that new residents already possess cultural profiles comparable to incumbent residents at the time of the survey. Two interpretations are possible. First, new residents may have adapted to building culture at an early stage after move-in. Second, self-selection effects may operate during the building selection process, whereby students with similar values congregate in the same building. The design of this study does not allow differentiation between these two possibilities.
+
+Time-series changes are shown in Figure~\ref{fig:convergence}c. From May to November, similarity remained stable for both new and incumbent residents, with no major fluctuations observed throughout the survey period. A pattern of increasing similarity over time (gradual cultural convergence) was not confirmed for new residents. This suggests that cultural adaptation had already been completed in the early period after move-in (before May), or that high similarity was already achieved at the time of move-in due to self-selection effects.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.95\textwidth]{figures/fig3_convergence.png}
+\caption{Analysis of cultural convergence. (a) Distribution of similarity to incumbent resident profiles by building. Violin plots show distribution shape, and box plots show median and interquartile range. (b) Comparison of similarity between new and incumbent residents within each building. Results of Wilcoxon rank-sum tests for each building are shown. (c) Time-series changes over five months (May, June, July, October, November). Error bars represent 95\% confidence intervals.}
+\label{fig:convergence}
+\end{figure}
+
+\subsection{RQ4: Cross-Gender Cultural Influence in Co-ed Buildings}
+
+Analysis was conducted for 41 new residents in Rosemary and Paprika (Figure~\ref{fig:gender_detail}).
+
+In relative comparison, mean similarity to same-sex seniors was 95.1\% (SD = 3.0\%) and to opposite-sex seniors was 95.7\% (SD = 2.6\%). The paired t-test yielded $t = -1.43$, $df = 40$, $p = 0.160$, with no significant difference. In the individual paired comparison in Figure~\ref{fig:gender_detail}a, line segments connect each new resident's similarity to same-sex and opposite-sex seniors. No consistent pattern was observed in line direction (whether same-sex or opposite-sex similarity was higher), with different directions shown for different individuals.
+
+By building, Rosemary (same-floor co-ed, $n = 18$) showed similarity of 95.4\% to same-sex seniors and 95.7\% to opposite-sex seniors, with $p = 0.170$. Paprika (floor-separated, $n = 23$) showed similarity of 95.5\% to same-sex seniors and 95.7\% to opposite-sex seniors, with $p = 0.716$. Neither building showed significant differences, and similar patterns were observed regardless of spatial design (same-floor co-ed vs. floor-separated).
+
+The distribution of similarity differences (same-sex minus opposite-sex) in Figure~\ref{fig:gender_detail}b shows that both buildings are centered around zero, with positive values (higher similarity to same-sex seniors) and negative values (higher similarity to opposite-sex seniors) distributed approximately equally. This indicates the absence of either same-sex or opposite-sex senior preference at the group level.
+
+In absolute comparison, mean similarity to male senior profiles was 95.0\% (SD = 3.4\%) and to female senior profiles was 95.8\% (SD = 2.0\%). The paired t-test yielded $t = -1.43$, $df = 40$, $p = 0.160$, with no significant difference. This result indicates that regardless of new residents' sex, they receive comparable cultural influence from both male and female seniors.
+
+The influence matrix in Figure~\ref{fig:gender_detail}c shows mean similarity to same-sex and opposite-sex seniors for each combination of new resident sex (Male/Female) $\times$ building (Rosemary/Paprika). High similarity of 93--97\% was observed across all cells, with no pattern of systematically higher or lower similarity for specific combinations.
+
+The subgroup effect sizes in Figure~\ref{fig:gender_detail}d show that 95\% confidence intervals for effect sizes (mean difference of same-sex minus opposite-sex) include zero for all subgroups: Overall, Male New, Female New, Rosemary, and Paprika. This indicates that no statistically significant same-sex senior preference was detected in any subgroup.
+
+These results indicate that the same-sex modeling preference predicted by social learning theory was not supported in the dormitory environment of this study. New residents appear to receive equal cultural influence from same-sex and opposite-sex seniors.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.95\textwidth]{figures/fig4_gender_influence_detail.png}
+\caption{Analysis of cross-gender cultural influence. (a) Individual paired comparison. For each new resident, similarity to same-sex seniors (left) and opposite-sex seniors (right) are connected by line segments. Line color indicates direction of change (blue: same-sex higher, red: opposite-sex higher). (b) Distribution of similarity differences (same-sex minus opposite-sex) by building. Red dashed lines indicate where difference equals zero. (c) Influence matrix. Mean similarity to same-sex and opposite-sex seniors displayed as a heatmap for each combination of new resident sex $\times$ building. (d) Effect sizes (mean difference of same-sex minus opposite-sex) and 95\% confidence intervals by subgroup.}
+\label{fig:gender_detail}
+\end{figure}
+
+\subsection{RQ5: Comparison Between Single-Sex and Co-ed Buildings}
+
+Differences by building type (male-only, female-only, co-ed) were examined using one-way ANOVA (Figure~\ref{fig:building_type}).
+
+For Q5 (event participation willingness), significant differences were found between building types (Figure~\ref{fig:building_type}a). Co-ed buildings (mean = 3.85) showed lower scores than both male-only (4.32, $p = 0.022$) and female-only (4.62, $p = 0.001$) buildings. This result indicates that residents of co-ed buildings have lower willingness to participate in dormitory events compared to residents of single-sex buildings. Some factor in co-ed environments may be reducing motivation for event participation.
+
+For Q8 (building attachment), differences between building types were also observed (Figure~\ref{fig:building_type}b). Co-ed buildings (3.59) showed lower scores than male-only buildings (4.28, $p = 0.001$). No significant difference was found compared to female-only buildings. Residents of co-ed buildings showed lower sense of belonging to their building compared to at least male-only building residents.
+
+Figure~\ref{fig:building_type}c shows comparison results between the two co-ed buildings (Rosemary and Paprika). For Q3 (unit friendships), Paprika (floor-separated) scored 0.55 points higher than Rosemary (same-floor co-ed; $p = 0.018$); for Q5 (event participation willingness), 1.02 points higher ($p < 0.001$); and for Q6 (interest in presentations), 0.77 points higher ($p = 0.015$).
+
+This result indicates that even among co-ed buildings, differences in residents' response patterns arise depending on spatial design. Floor-separated Paprika showed higher scores than same-floor co-ed Rosemary for unit friendships, event participation willingness, and interest in presentations. The reduction in frequency of opposite-sex contact in daily living spaces through floor separation may be related to these differences.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.95\textwidth]{figures/fig5_building_type_comparison.png}
+\caption{Comparison between building types. (a) Distribution of Q5 (event participation willingness) scores by building type. *$p<0.05$, **$p<0.01$, ***$p<0.001$. (b) Distribution of Q8 (building attachment) scores by building type. (c) Comparison between co-ed buildings (Rosemary vs. Paprika). Items with significant differences (Q3, Q5, Q6) are shown.}
+\label{fig:building_type}
+\end{figure}
+
+\subsection{Supplementary Analysis: Q2 (Opposite-Sex Communication Barriers)}
+
+Analysis of Q2 (feel barriers when talking with opposite sex) by building $\times$ sex was conducted (Figure~\ref{fig:q2_barrier}).
+
+As shown in Figure~\ref{fig:q2_barrier}a, male residents in Basil showed the highest mean (mean = 2.8). Basil is a male-only dormitory, with fewer opportunities for daily contact with the opposite sex than other buildings. The scarcity of opposite-sex contact opportunities may be related to the high sense of barriers in opposite-sex communication. In contrast, in co-ed buildings (Rosemary and Paprika), large individual differences were observed for both males and females, with wide distribution ranges.
+
+Time-series changes in co-ed buildings are shown in Figure~\ref{fig:q2_barrier}b. Male residents in Rosemary showed a V-shaped pattern, decreasing from May to July, increasing in October, and decreasing again in November. The temporary increase in October after summer vacation (August--September) suggests that the reduction in opposite-sex contact during the vacation period may be related to the increase in barrier sense.
+
+Female residents in Paprika showed a U-shaped pattern, increasing from May to July, decreasing in October, and increasing again in November. This differs from the pattern for male residents in Rosemary, indicating that time-series changes in opposite-sex communication barrier sense differ depending on the combination of building and sex. These non-linear fluctuation patterns suggest that the adaptation process to daily opposite-sex contact is not a simple linear change.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.95\textwidth]{figures/fig6_q2_barrier.png}
+\caption{Analysis of Q2 (opposite-sex communication barriers). (a) Distribution of Q2 scores by building $\times$ sex. Box plots show median and interquartile range, and individual points show each respondent's score. (b) Time-series changes in co-ed buildings. Lines show mean score trajectories for each building $\times$ sex, error bars show standard errors, and point sizes reflect sample sizes.}
+\label{fig:q2_barrier}
+\end{figure}
+
+\subsection{Supplementary: Building Type Overview}
+
+Figure~\ref{fig:overview} provides an overview of sample distribution, item-specific scores, and ANOVA results.
+
+The sample distribution in Figure~\ref{fig:overview}a shows sample sizes for each combination of building type $\times$ sex $\times$ resident type. Male-only buildings consist only of males, and female-only buildings consist only of females. Co-ed buildings include both sexes, but the sex ratio is not equal. Variation in sample sizes across cells suggests that statistical power may be limited for some comparisons.
+
+The item-specific mean scores in Figure~\ref{fig:overview}b show mean values and standard errors for the eight items by building type. Visual confirmation shows that co-ed building scores are lower than single-sex buildings for Q5 (event participation willingness) and Q8 (building attachment). Differences between building types are relatively small for other items.
+
+The one-way ANOVA F statistics in Figure~\ref{fig:overview}c show the strength of building type effects for each item. The red line indicates the critical value ($F_{critical}$) at significance level $\alpha = 0.05$. Q5 and Q8 exceed this critical value, confirming significant building type effects. Other items (Q1--Q4, Q6, Q7) all fall below the critical value, and differences between building types were not significant.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.95\textwidth]{figures/fig7_building_type_overview.png}
+\caption{Building type overview. (a) Sample distribution. Sample sizes for each combination of building type $\times$ sex $\times$ resident type are shown. (b) Item-specific mean scores by building type. Error bars indicate standard errors. (c) One-way ANOVA F statistics for each questionnaire item. The red line indicates the critical value at significance level $\alpha = 0.05$.}
+\label{fig:overview}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 6. Discussion
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Discussion}
+
+\subsection{Existence of Building Culture}
+
+The overall ICC was 0.075, indicating that approximately 7.5\% of response variance was explained by building differences (Figure~\ref{fig:cultural_effects}a, b). This value is comparable to the range of classroom effects (ICC = 0.05--0.20) reported in educational research by \citet{hedges2007}. PERMANOVA found significant building differences ($p = 0.001$), while sex differences were not significant ($p = 0.276$; Figure~\ref{fig:cultural_effects}c). This result indicates that differences in response patterns are associated with the social unit of building rather than sex per se.
+
+By item, Q5 (event participation willingness) showed the highest ICC at 0.279 (Figure~\ref{fig:cultural_effects}a, Table~\ref{tab:icc}), while Q7 (self-disclosure) and Q4 (room cleanliness) had ICC $\approx$ 0. The pattern of large building effects for items asking about willingness to participate in collective activities and small building effects for items reflecting individual personality traits is consistent with buildings being involved in the formation of social norms.
+
+\subsection{Cross-Gender Cultural Influence}
+
+Among new residents in co-ed buildings, no significant difference was found between similarity to same-sex seniors (95.1\%) and opposite-sex seniors (95.7\%; $p = 0.160$; Figure~\ref{fig:gender_detail}). This pattern was consistent in both Rosemary ($p = 0.170$) and Paprika ($p = 0.716$), and 95\% confidence intervals for effect sizes included zero across all subgroups (Figure~\ref{fig:gender_detail}d).
+
+This result shows a pattern different from the same-sex modeling preference predicted by \citet{bandura1977} social learning theory. \citet{bussey1999} noted that gender-based model preferences are context-dependent, and the cooperative attitudes and social attitudes measured in this study may not be strongly associated with gender roles. Additionally, the fact that participants in this study are university students who have been educated in co-educational environments since early childhood may be a factor in why same-sex modeling preference was not observed.
+
+\subsection{Differences Between Single-Sex and Co-ed Buildings}
+
+Co-ed buildings showed lower scores than single-sex buildings for Q5 (event participation willingness) and Q8 (building attachment; Figure~\ref{fig:building_type}a, b). The presence of the opposite sex in co-ed environments may serve as a factor suppressing social participation. Previous research on evaluation apprehension has reported that the presence of potential evaluators affects individuals' performance and participation behavior \citep{cottrell1972}, and the presence of the opposite sex may be evoking such evaluation apprehension.
+
+Additionally, comparison of the two co-ed buildings showed that Paprika (floor-separated) had higher scores than Rosemary (same-floor co-ed) on multiple items (Figure~\ref{fig:building_type}c). The reduction in frequency of opposite-sex contact in daily living spaces through floor separation may be related to these differences. This result suggests that spatial design of co-ed dormitories influences residents' social participation.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 7. Conclusion
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Conclusion}
+
+This study estimated building-level cultural influence in university dormitories using linear mixed-effects models and examined patterns of cross-gender cultural influence in co-ed buildings.
+
+Regarding RQ1, approximately 7.5\% of response variance was explained by building differences (ICC = 0.075; Figure~\ref{fig:cultural_effects}). PERMANOVA found significant building differences ($p = 0.001$), while sex differences were not significant ($p = 0.276$). This result indicates that differences in response patterns are associated with the social unit of building rather than sex per se.
+
+Regarding RQ2, Q5 (event participation willingness) had ICC = 0.279 ($p < 0.001$), while Q7 (self-disclosure) and Q4 (room cleanliness) had ICC $\approx$ 0 (Table~\ref{tab:icc}, Figure~\ref{fig:cultural_effects}a). Large building effects were confirmed for items asking about willingness to participate in collective activities, while small building effects were found for items reflecting individual personality traits.
+
+Regarding RQ3, no significant difference in similarity was found between new and incumbent residents, and new residents' similarity remained stable throughout the survey period (Figure~\ref{fig:convergence}). This result suggests that cultural adaptation had already been completed in the early period after move-in, or that high similarity was achieved at the time of move-in due to self-selection effects.
+
+Regarding RQ4, no significant difference was found between similarity to same-sex and opposite-sex seniors among new residents in co-ed buildings ($p = 0.160$; Figure~\ref{fig:gender_detail}). The same-sex modeling preference predicted by social learning theory was not supported in this study, indicating that new residents receive equal cultural influence from same-sex and opposite-sex seniors.
+
+Regarding RQ5, co-ed buildings showed lower scores than single-sex buildings for Q5 (event participation willingness) and Q8 (building attachment; Figure~\ref{fig:building_type}a, b). Additionally, Paprika (floor-separated) showed higher scores than Rosemary (same-floor co-ed) on multiple items (Figure~\ref{fig:building_type}c). These results indicate the possibility that some factor suppresses social participation in co-ed environments, and that spatial design influences this suppression.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 8. Limitations and Future Research
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Limitations and Future Research}
+
+The following limitations of this study should be noted. The sample size was 153, with only 41 new residents in co-ed buildings. Statistical power in subgroup analyses may be limited due to sample size constraints (Figure~\ref{fig:overview}a).
+
+This study targeted only a single university dormitory, limiting generalizability of results. Whether similar patterns would be observed in dormitory environments at other universities or in other countries is unknown.
+
+Building selection was not random, so selection effects cannot be ruled out. Students with similar values may select the same building, and whether observed between-building differences result from socialization after move-in or self-selection before move-in cannot be distinguished (Figure~\ref{fig:convergence}).
+
+Although longitudinal data were collected, this paper primarily conducted cross-sectional analysis. Time-series analysis (Figure~\ref{fig:convergence}c, Figure~\ref{fig:q2_barrier}b) used only data from May onward, and data from immediately after move-in (April) were not included.
+
+Future research directions include longer-term follow-up studies to capture changes before and after move-in, comparative studies at other universities, and elucidation of mechanisms underlying differences in social participation willingness in co-ed buildings through mixed-methods approaches.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Acknowledgements
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Acknowledgements}
+
+The authors thank the H village Resident Assistants (RAs) and all residents who participated in this survey. The authors also thank the H village management office for their cooperation in conducting this study.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Data and Code Availability
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Data and Code Availability}
+
+The analysis code used in this study is available on GitHub at: \url{https://github.com/[repository-name]/h-village-culture-analysis}. All statistical analyses were performed using \proglang{R} version 4.3.0 \citep{rcore2024}. The following \proglang{R} packages were used: \pkg{lme4} for linear mixed-effects models \citep{bates2015}, \pkg{vegan} for PERMANOVA analysis, \pkg{boot} for bootstrap resampling, and \pkg{ggplot2} for visualization. Due to privacy considerations for survey participants, the raw data cannot be made publicly available. Requests for data access for research purposes should be directed to the corresponding author.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Author Contributions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Author Contributions}
+
+T.S. conceived the study, designed the survey, collected the data, performed the statistical analyses, and wrote the manuscript. N.N., M.L., and M.I. contributed to survey design, data collection, and manuscript revision.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Conflict of Interest
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Conflict of Interest}
+
+The authors declare no conflict of interest.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% References
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thebibliography}{99}
+
+\bibitem[Anderson(2001)]{anderson2001}
+Anderson, M. J. (2001).
+A new method for non-parametric multivariate analysis of variance.
+\textit{Austral Ecology}, 26(1), 32--46.
+
+\bibitem[Astin(1993)]{astin1993}
+Astin, A. W. (1993).
+\textit{What matters in college? Four critical years revisited}.
+San Francisco: Jossey-Bass.
+
+\bibitem[Bandura(1977)]{bandura1977}
+Bandura, A. (1977).
+\textit{Social learning theory}.
+Englewood Cliffs, NJ: Prentice-Hall.
+
+\bibitem[Bates et al.(2015)]{bates2015}
+Bates, D., M{\"a}chler, M., Bolker, B., \& Walker, S. (2015).
+Fitting linear mixed-effects models using lme4.
+\textit{Journal of Statistical Software}, 67(1), 1--48.
+
+\bibitem[Bussey \& Bandura(1999)]{bussey1999}
+Bussey, K., \& Bandura, A. (1999).
+Social cognitive theory of gender development and differentiation.
+\textit{Psychological Review}, 106(4), 676--713.
+
+\bibitem[Cottrell(1972)]{cottrell1972}
+Cottrell, N. B. (1972).
+Social facilitation.
+In C. G. McClintock (Ed.), \textit{Experimental social psychology} (pp. 185--236).
+New York: Holt, Rinehart \& Winston.
+
+\bibitem[Hedges \& Hedberg(2007)]{hedges2007}
+Hedges, L. V., \& Hedberg, E. C. (2007).
+Intraclass correlation values for planning group-randomized trials in education.
+\textit{Educational Evaluation and Policy Analysis}, 29(1), 60--87.
+
+\bibitem[Hillier \& Hanson(1984)]{hillier1984}
+Hillier, B., \& Hanson, J. (1984).
+\textit{The social logic of space}.
+Cambridge: Cambridge University Press.
+
+\bibitem[Inkelas et al.(2007)]{inkelas2007}
+Inkelas, K. K., Daver, Z. E., Vogt, K. E., \& Leonard, J. B. (2007).
+Living--learning programs and first-generation college students' academic and social transition to college.
+\textit{Research in Higher Education}, 48(4), 403--434.
+
+\bibitem[Pascarella \& Terenzini(2005)]{pascarella2005}
+Pascarella, E. T., \& Terenzini, P. T. (2005).
+\textit{How college affects students: A third decade of research} (Vol. 2).
+San Francisco: Jossey-Bass.
+
+\bibitem[{R Core Team}(2024)]{rcore2024}
+{R Core Team}. (2024).
+\textit{R: A language and environment for statistical computing}.
+Vienna, Austria: R Foundation for Statistical Computing.
+
+\bibitem[Willoughby \& Carroll(2009)]{willoughby2009}
+Willoughby, B. J., \& Carroll, J. S. (2009).
+The impact of living in co-ed resident halls on risk-taking among college students.
+\textit{Journal of American College Health}, 58(3), 241--246.
+
+\end{thebibliography}
+
+\end{document}
