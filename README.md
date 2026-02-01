@@ -1,6 +1,6 @@
 # Dormitory Culture Analysis
 
-[![DOI](https://img.shields.io/badge/DOI-10.31235%2Fosf.io%2FXXXXX-blue)](https://doi.org/10.31235/osf.io/XXXXX)
+[![DOI](https://img.shields.io/badge/DOI-10.31235%2Fosf.io%2FXXXXX-blue)]([https://doi.org/10.31235/osf.io/XXXXX](https://doi.org/10.31235/osf.io/t3nbf_v1))
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Overview
